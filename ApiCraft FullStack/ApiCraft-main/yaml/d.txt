@@ -1,0 +1,273 @@
+db.users.insertMany([
+  {
+    name: "Juan Pérez",
+    nickname: "Xx__Shadersss__xX",
+    email: "juan@example.com",
+    password: "3H7S0D__ds",
+    account: "Premium",
+    status: "activo",
+    skin: "piel_1"
+  },
+  {
+    name: "María Rodríguez",
+    nickname: "CoolDude123",
+    email: "maria@example.com",
+    password: "Password123",
+    account: "Premium",
+    status: "activo",
+    skin: "piel_2"
+  },
+  {
+    name: "Carlos González",
+    nickname: "GamerPro456",
+    email: "carlos@example.com",
+    password: "SecurePassword789",
+    account: "noPremium",
+    status: "activo",
+    skin: "piel_3"
+  },
+  {
+    name: "Ana López",
+    nickname: "CrazyCatLady",
+    email: "ana@example.com",
+    password: "MyCats1234",
+    account: "noPremium",
+    status: "inactivo",
+    skin: "piel_4"
+  },
+  {
+    name: "Luisa Martínez",
+    nickname: "MusicLover88",
+    email: "luisa@example.com",
+    password: "SongLover567",
+    account: "Premium",
+    status: "activo",
+    skin: "piel_5"
+  },
+  {
+    name: "Pedro Sánchez",
+    nickname: "CodingNinja77",
+    email: "pedro@example.com",
+    password: "CodeMaster987",
+    account: "Premium",
+    status: "activo",
+    skin: "piel_6"
+  },
+  {
+    name: "Sofía Jiménez",
+    nickname: "BookWorm12",
+    email: "sofia@example.com",
+    password: "ReadingFan5678",
+    account: "noPremium",
+    status: "inactivo",
+    skin: "piel_7"
+  },
+  {
+    name: "Manuel García",
+    nickname: "NatureExplorer8",
+    email: "manuel@example.com",
+    password: "OutdoorAdventures2468",
+    account: "noPremium",
+    status: "activo",
+    skin: "piel_8"
+  },
+  {
+    name: "Elena Fernández",
+    nickname: "ArtisticSoul99",
+    email: "elena@example.com",
+    password: "CreativeMind9876",
+    account: "Premium",
+    status: "activo",
+    skin: "piel_9"
+  },
+  {
+    name: "José Pérez",
+    nickname: "SportsFan777",
+    email: "jose@example.com",
+    password: "SportsLover1357",
+    account: "Premium",
+    status: "activo",
+    skin: "piel_10"
+  }
+]);
+
+
+db.shaders.insertMany([
+  {
+    nombre: "BSL Shaders",
+    version: "2.0.1",
+    codigo: "001",
+    mods: {
+      mod1: "001",
+      mod2: "002",
+    },
+    descargas: 2500,
+  },
+  {
+    nombre: "SEUS Renewed",
+    version: "3.0.0",
+    codigo: "002",
+    mods: {
+      mod1: "003",
+    },
+    descargas: 3200,
+  },
+  {
+    nombre: "Complimentary Shaders",
+    version: "1.1.0",
+    codigo: "003",
+    mods: {
+      mod1: "001",
+      mod2: "002",
+    },
+    descargas: 1800,
+  },
+  {
+    nombre: "Chocapic13' Shaders",
+    version: "4.2.0",
+    codigo: "004",
+    mods: {
+      mod1: "001",
+      mod2: "002",
+    },
+    descargas: 2700,
+  },
+  {
+    nombre: "Beyond Belief Shaders",
+    version: "2.5.0",
+    codigo: "005",
+    mods: {
+      mod1: "003",
+      mod2: "004",
+      mod3: "005",
+    },
+    descargas: 2200,
+  },
+  {
+    nombre: "Sildur's Shaders",
+    version: "1.3.0",
+    codigo: "006",
+    mods: {
+      mod1: "005",
+    },
+    descargas: 3100,
+  },
+  {
+    nombre: "Vanilla Plus Shader",
+    version: "1.0.0",
+    codigo: "007",
+    mods: {
+      mod1: "009",
+    },
+    descargas: 1500,
+  },
+  {
+    nombre: "Oceano Shaders",
+    version: "2.0.0",
+    codigo: "008",
+    descargas: 2000,
+  },
+  {
+    nombre: "Nostalgia Shader",
+    version: "1.2.0",
+    codigo: "009",
+    mods: {
+      mod1: "001",
+      mod2: "002",
+      mod3: "004",
+    },
+    descargas: 2800,
+  },
+  {
+    nombre: "KUDA-Shaders",
+    version: "2.1.0",
+    codigo: "010",
+    mods: {
+      mod1: "002",
+    },
+    descargas: 2900,
+  },
+]);
+
+db.textures.insertMany([
+  {
+    nombre: "Bloom",
+    version: "1.0.0",
+    codigo: "001",
+    shaders: "001",
+    categoria: "Realista",
+    descargas: 450,
+  },
+  {
+    nombre: "Bright and Retro",
+    version: "2.1.0",
+    codigo: "002",
+    categoria: "Realista",
+    descargas: 600,
+  },
+  {
+    nombre: "Epic Adventures",
+    version: "1.5.0",
+    codigo: "003",
+    categoria: "Realista",
+    descargas: 750,
+    shaders: "006",
+  },
+  {
+    nombre: "Faithful",
+    version: "1.0.0",
+    codigo: "004",
+    categoria: "Simplista",
+    descargas: 300,
+  },
+  {
+    nombre: "Good Vibes",
+    version: "1.2.0",
+    codigo: "005",
+    categoria: "Simplista",
+    descargas: 450,
+  },
+  {
+    nombre: "Jicklus",
+    version: "2.0.0",
+    codigo: "006",
+    categoria: "Tematico",
+    descargas: 550,
+    shaders: "009",
+  },
+  {
+    nombre: "Jolicraft",
+    version: "1.1.0",
+    codigo: "007",
+    categoria: "Caricaturesco",
+    descargas: 400,
+    shaders: "003",
+  },
+  {
+    nombre: "Mizunos 16 Craft",
+    version: "1.2.0",
+    codigo: "008",
+    categoria: "Caricaturesco",
+    descargas: 480,
+    shaders: "010",
+  },
+  {
+    nombre: "Soartex Fanver",
+    version: "2.1.0",
+    codigo: "009",
+    categoria: "Realismo",
+    descargas: 620,
+    shaders: "008",
+  },
+  {
+    nombre: "Dragon Dance",
+    version: "1.0.0",
+    codigo: "010",
+    categoria: "Terror",
+    descargas: 350,
+    shaders: "004",
+  },
+]);
+
+
+VERSION TIENE QUE SER "000"

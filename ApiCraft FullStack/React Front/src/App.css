@@ -1,0 +1,133 @@
+@import url(https://db.onlinewebfonts.com/c/6ab539c6fc2b21ff0b149b3d06d7f97c?family=Minecraft+Regular); 
+
+@font-face {
+  font-family: "Minecraft Regular";
+  src: url("https://db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.eot");
+  src: url("https://db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.svg#Minecraft Regular")format("svg");
+}
+
+
+*{  
+  margin: 0px; padding:0px; font-family: "Minecraft Regular"; }
+
+
+.logo{
+
+  width: 12.5em;
+  height: 2.5em;
+  margin: 1em;
+  border-radius: 0.3em;
+  background-image: url('./Assets/Logo1.png');
+  background-size: cover;
+
+
+}
+
+
+.bookOpen{
+  width: 11em;
+  height: 13.5em;
+  border-radius: 0.5em;
+  background-image: url('../src/Assets/openBook.png');
+  background-size: cover;
+  border: none;
+}
+
+
+.inputSearch{
+  border: none;
+  background: none;
+  text-indent: 10px;
+  width: 13em;
+  height: 16em;
+  border-radius: 0.5em;
+}
+
+.logo:hover{
+
+  width: 12.5em;
+  height: 2.5em;
+  margin: 1em;
+  border-radius: 0.3em;
+  background-image: url('./Assets/Logo3.png');
+  background-size: cover;
+}
+
+
+.shadow{
+  width: 100%;
+  height: 7.5em;
+  -webkit-box-shadow: -1px 87px 56px 8px rgba(0, 0, 0, 0.473);
+-moz-box-shadow: -1px 87px 56px 8px rgba(0, 0, 0, 0.603);
+box-shadow: -1px 87px 56px 8px rgba(0, 0, 0, 0.397);
+}
+.header{
+  
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+  height: 10em;
+  background-image: url('./Assets/Header.png');
+}
+.bodyPage{
+  width: 100%;
+  height: 71em;
+  background-image: url('./Assets/Background.png');
+}
+.middlePage{
+
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 65em;
+}
+
+.card{
+  width: 50em;
+  height: 50.5em;
+  border-radius: 0.5em;
+background-image: url('../src/Assets/Card\ 2.png');
+background-size: cover;
+
+
+}
+
+.card2{
+  
+  width: 50em;
+  height: 50.5em;
+  border-radius: 0.5em;
+background-image: url('../src/Assets/Card-no-image.png');
+background-size: cover;
+}
+
+.buttonHolder {
+  
+  width: 5em;
+  height: 5em;
+  background-color: rgba(60, 62, 34, 0.747);
+  border: 6px ridge #ada596; 
+
+  
+}
+
+.buttonHolder:hover {
+  width: 5.8em;
+  height: 5.8em;
+  bottom: 1em;
+  top:0.3em;
+  background-color: rgba(60, 62, 34, 0.801);
+  border: 7px ridge #dfd2be; 
+  box-shadow: 0 0 5px rgba(171, 187, 171, 0.5); 
+  position: relative; 
+}
+
