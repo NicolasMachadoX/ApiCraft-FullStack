@@ -1,0 +1,191 @@
+.containerUser {
+    display: flex;
+    justify-content: center;
+    right: 10em;
+    height: 50em;
+    width: 55em;
+    margin-bottom: 1.25em;
+  }
+  
+  .up {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+  }
+
+  .cardAndSearch{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+
+  }
+  
+  .cardUser {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    top: -20em;
+    border-radius: 1.5em;
+    width: 45.8em;
+    height: 46em;
+    gap: 1.25em;
+    background: transparent;
+    background-size: auto;
+  }
+  
+  .itemUser {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 1em;
+    width: 43.9em;
+    height: 43.84em;
+    position: relative;
+    margin-bottom: 1.25em;
+    background-image: url('../../Assets/Card\ 2.png');
+  }
+  
+  .skinHolder {
+    width: 14em;
+    height: 19em;
+    padding: 2.5em;
+    border-radius: 1em;
+    position: relative;
+    cursor: pointer;
+    left: 1.5em;
+  }
+  
+  .userImage {
+    width: 11em;
+    height: 20em;
+  }
+  
+  .skinHolder:hover .userDetails {
+    width: 20em;
+    height: 1.5em;
+    display: flex;
+    bottom: 3em;
+  }
+  
+  .buttonContainer .spanButton {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px; /* Espaciado entre los botones */
+  }
+  
+  .buttonContainer .spanButton:hover .hoveredSpan {
+    display: block;
+  }
+  
+  .hoveredSpan {
+    position: absolute;
+    top: 12em;
+    left: 1em;
+    width: 4em;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.3125em 0.625em;
+    border-radius: 0.3125em;
+    text-align: center;
+    display: none;
+  }
+  
+  .userDetails {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0.3125em 0.625em;
+    border-radius: 0.3125em;
+    display: none;
+    text-align: center;
+  }
+  
+  .infoHolder {
+    width: 100%;
+    background-color: transparent;
+    padding: 1.25em;
+  }
+  
+  .imgItem {
+    position: relative;
+    object-fit: contain;
+    top: 17.7em;
+    left: 1.8em;
+    width: 4.7em;
+    height: 4.2em;
+    border: none;
+    background: none;
+  }
+  
+  .imgCard {
+    position: relative;
+    object-fit: contain;
+    top: -0.4em;
+    left: -0.3em;
+    width: 4.7em;
+    height: 4.2em;
+    border: none;
+  }
+  
+  .imgCard:hover {
+    position: relative;
+    object-fit: contain;
+    top: -0.1em;
+    left: -0.3em;
+    width: 4.9em;
+    height: 4.5em;
+    border: none;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    height: 3.5em;
+    width: 40.6em;
+    top: 2em;
+    background-color: transparent;
+    padding: 0.625em;
+  }
+
+  .infoRow p{
+    font-size: 18px;
+    color: #ffffff;
+  }
+  
+  .infoTitle {
+    font-size: 18px;
+    color: #fff45d !important;
+  }
+  
+  .down {
+    left: 5em;
+    width: 40em;
+    height: 40em;
+  }
+  
+  .infoRow {
+    background-color: #000000;
+    margin: 0.5em;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  button {
+    width: 48%;
+    margin: 0;
+  }
+  
+  .p {
+    margin: 0;
+  }
+  
+  .h1 {
+    margin: 0;
+  }
+  
+  

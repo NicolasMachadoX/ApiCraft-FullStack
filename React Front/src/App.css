@@ -1,0 +1,218 @@
+@import url(https://db.onlinewebfonts.com/c/6ab539c6fc2b21ff0b149b3d06d7f97c?family=Minecraft+Regular); 
+
+@font-face {
+  font-family: "Minecraft Regular";
+  src: url("https://db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.eot");
+  src: url("https://db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.svg#Minecraft Regular")format("svg");
+}
+
+body{
+  background-image: url('./Assets/Background.png');
+  background-size: cover;
+}
+*{  
+  margin: 0px; padding:0px; font-family: "Minecraft Regular"; }
+
+  .shadowDiv{
+    width: 100%;
+    height: 7.5em;
+    -webkit-box-shadow: 0px 14px 51px 35px rgba(0,0,0,0.58);
+    -moz-box-shadow: 0px 14px 51px 35px rgba(0,0,0,0.58);
+    box-shadow: 0px 14px 51px 35px rgba(0,0,0,0.58);
+  }
+
+  
+.containerUser{
+  display: grid;
+  grid-template-columns: auto;
+  background-color: #ada59600;
+
+
+} 
+
+
+.logo{
+
+  width: 12.5em;
+  height: 2.5em;
+  left: 200px;
+  border-radius: 0.3em;
+  background-image: url('./Assets/Logo1.png');
+  background-size: cover;
+
+
+}
+
+
+.logo:hover{
+
+  width: 12.5em;
+  height: 2.5em;
+  margin: 1em;
+  border-radius: 0.3em;
+  background-image: url('./Assets/Logo3.png');
+  background-size: cover;
+}
+
+.itemUser{
+  background-color: rgba(240, 248, 255, 0.021);
+}
+
+.bookOpen{
+  position: relative;
+  top: 2em;
+  left: 90em;
+  padding: 0.5em ;
+  width: 10.7em;
+  height: 13.5em;
+  border-radius: 0.5em;
+  background-image: url('../src/Assets/openBook.png');
+  background-size: cover;
+  border: none;
+}
+
+.inputSearch{
+  position: relative;
+  top: 1em;
+  left: 1em;
+  border: none; 
+  outline: none; 
+  padding: 6px 10px 5px; 
+  background-color: transparent;
+  display: block; 
+  width: 8em;
+  height:1em; 
+  font-size: 15px; 
+}
+
+
+.text {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: none;
+}
+
+.object:hover .text {
+  display: block; 
+}
+
+
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+  height: 10em;
+  background-image: url('./Assets/Header.png');
+  z-index: 9999
+}
+.bodyPage{
+  width: 100%;
+  height: 100vh;
+}
+.middlePage{
+ width: 100%;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+}
+
+.space{
+  width: 10em;
+  height: 15em;
+
+}
+
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50em;
+  height: 50.5em;
+  border-radius: 0.5em;
+
+background-size: cover;
+
+
+}
+
+.card2{
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  padding: 1em;
+  width: 43.9em;
+  height: 43.84em;
+  position: relative;
+  margin-bottom: 1.25em;
+background-image: url('../src/Assets/Card.png');
+background-size: contain;
+}
+
+.buttonHolder {
+  width: 5em;
+  height: 5em;
+  background-color: rgba(60, 62, 34, 0.747);
+  border: 6px ridge #ada596; 
+  box-shadow: 0 0 5px rgba(95, 96, 95, 0.5); 
+}
+
+
+.imgNavbar {
+  position: relative; 
+  object-fit: contain;
+  top: -0.1em;
+  left: -0.3em; 
+  width: 4.7em;
+  height: 4.2em;
+  border: none
+}
+
+
+.imgNavbar:not([src]) {
+  width: 0em;
+  border: none; 
+  
+}
+  .imgNavbar:hover {
+    position: relative; 
+    top: -0em;
+    left: -0.5em; 
+    width: 5.6em;
+    height: 4.9em;
+  border: none
+}
+
+
+
+.buttonHolder:hover {
+  width: 5.8em;
+  height: 5.8em;
+  bottom: 1em;
+  top:-0.2em;
+  background-color: rgba(60, 62, 34, 0.801);
+  border: 7px ridge #dfd2be; 
+  box-shadow: 0 0 5px rgba(171, 187, 171, 0.5); 
+  position: relative; 
+  
+}
+.renderUsers{
+width: 10em;
+
+}
