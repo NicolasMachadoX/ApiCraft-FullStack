@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Heisenberg",
+    "code": "001",
+    "image": "heisenberg.png",
+    "description": "Become the infamous Heisenberg from Breaking Bad.",
+    "category": "TV",
+    "downloads": "5000"
+  },
+  {
+    "name": "Homer",
+    "code": "002",
+    "image": "homer.png",
+    "description": "D'oh! Transform into Homer Simpson from The Simpsons.",
+    "category": "TV",
+    "downloads": "4500"
+  },
+  {
+    "name": "Finn",
+    "code": "003",
+    "image": "finn.png",
+    "description": "Adventure time! Dress up as Finn from Adventure Time.",
+    "category": "Cartoon",
+    "downloads": "3000"
+  },
+  {
+    "name": "Jotaro",
+    "code": "004",
+    "image": "jotaro.png",
+    "description": "Ora ora! Emulate Jotaro Kujo from JoJo's Bizarre Adventure.",
+    "category": "Anime",
+    "downloads": "2800"
+  },
+  {
+    "name": "Eren",
+    "code": "005",
+    "image": "eren.png",
+    "description": "Join the fight as Eren Yeager from Attack on Titan.",
+    "category": "Anime",
+    "downloads": "3500"
+  },
+  {
+    "name": "Naruto",
+    "code": "006",
+    "image": "naruto.png",
+    "description": "Believe it! Transform into Naruto Uzumaki from Naruto.",
+    "category": "Anime",
+    "downloads": "4200"
+  },
+  {
+    "name": "Goku",
+    "code": "007",
+    "image": "goku.png",
+    "description": "Go Super Saiyan as Goku from Dragon Ball.",
+    "category": "Anime",
+    "downloads": "2400"
+  },
+  {
+    "name": "Slenderman",
+    "code": "008",
+    "image": "slenderman.png",
+    "description": "Become the mysterious Slenderman.",
+    "category": "Creepypasta",
+    "downloads": "3800"
+  },
+  {
+    "name": "KingCrimson",
+    "code": "009",
+    "image": "kingcrimson.png",
+    "description": "Enter the world of JoJo's Bizarre Adventure as King Crimson.",
+    "category": "Anime",
+    "downloads": "2700"
+  },
+  {
+    "name": "Mikasa",
+    "code": "010",
+    "image": "mikasa.png",
+    "description": "Fight for humanity as Mikasa Ackerman from Attack on Titan.",
+    "category": "Anime",
+    "downloads": "3200"
+  }
+]

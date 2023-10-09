@@ -1,0 +1,604 @@
+openapi: 3.0.1
+info:
+  title: APICraft
+  description: Stores a large amount of data about premium and non-premium Minecraft collections, along with other game-related data
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:7777/api
+
+tags:
+  - name: collections
+    description: This endpoint handles all information related to collections
+  - name: shaders
+    description: This endpoint handles all information related to shaders
+  - name: mods
+    description: This endpoint handles all information related to mods
+  - name: maps
+    description: This endpoint handles all information related to maps
+  - name: servers
+    description: This endpoint handles all information related to servers
+  - name: users
+    description: This endpoint handles all information related to users
+  - name: skins
+    description: This endpoint handles all information related to skins
+  - name: textures
+    description: This endpoint handles all information related to textures
+
+paths:
+  /collection/get:
+    get:
+      tags:
+        - collections
+      summary: Get all elements from the collection
+      operationId: GetAll
+      responses:
+        '200':
+          description: Makes a GET request to get all elements from the collection
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/users'
+
+  /collection/get/{id}:
+    get:
+      tags:
+        - collections
+      summary: Get an element by its id
+      operationId: getById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Get an element from the database by its _id
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '200':
+          description: Details of the element
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/users'
+
+  /collection/getByName:
+    get:
+      tags:
+        - collections
+      summary: Get an element by its name
+      operationId: getByName
+      parameters:
+        - name: query
+          in: query
+          required: true
+          description: Get an element from the database by its name
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Details of the element
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/users'
+
+  /collection/getByIp:
+    get:
+      tags:
+        - collections
+      summary: Get an element by its Ip
+      operationId: getByIp
+      parameters:
+        - name: query
+          in: query
+          required: true
+          description: Get an element from the database by its Ip
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Details of the element
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/servers'
+
+  /collection/getByAccess:
+    get:
+      tags:
+        - collections
+      summary: Get an element by its access
+      operationId: getByAccess
+      parameters:
+        - name: query
+          in: query
+          required: true
+          description: Get all elements by their access
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Details of the element
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/users'
+
+  /collection/getByCapacity:
+    get:
+      tags:
+        - collections
+      summary: Get elements by capacity
+      operationId: getByCapacity
+      parameters:
+        - name: query
+          in: query
+          required: true
+          description: Get all elements by capacity
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Details of the element
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/servers'
+
+  /collection/getByVersion:
+    get:
+      tags:
+        - collections
+      summary: Get elements by version
+      operationId: getByVersion
+      parameters:
+        - name: query
+          in: query
+          required: true
+          description: Get all elements by a specific version
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Details of the element
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/users'
+
+  /collection/getByPlatform:
+    get:
+      tags:
+        - collections
+      summary: Get elements by platform
+      operationId: getByPlatform
+      parameters:
+        - name: query
+          in: query
+          required: true
+          description: Get all elements by platform
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Details of the element
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/servers'
+                
+  /collection/getMorePopular:
+    get:
+      tags:
+        - collections
+      summary: Get the most popular elements
+      operationId: getMorePopular
+      responses:
+        '200':
+          description: Details of the element
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/maps' 
+
+  /collection/getLessPopular:
+    get:
+      tags:
+        - collections
+      summary: Get the least popular elements
+      operationId: getLessPopular
+      responses:
+        '200':
+          description: Get the least popular elements
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/users'
+
+  /collection/post:
+    post:
+      tags:
+        - collections
+      summary: Create a new Element
+      operationId: Post
+      requestBody:
+        description: Data of the element to create
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: 'ShadowShinime'
+                ip:
+                  type: string
+                  example: 'olimpocraft.me'
+                platform:
+                  type: string
+                  example: 'Bedrock'  
+                version:
+                  type: string
+                  example: 1.16.5  
+                capacity:
+                  type: number
+                  example: 1000
+                access:
+                  type: string
+                  enum:
+                    - Premium
+                    - noPremium
+                status:
+                  type: boolean
+                  example: true
+      responses:
+        '201':
+          description: Element created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/users'
+
+  /collection/patch/{id}:
+    patch:
+      tags:
+        - collections
+      summary: Update an element by ID
+      operationId: updateById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID of the element to update
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        description: Updated data of the element
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: 'ShadowShinime'
+                ip:
+                  type: string
+                  example: 'olimpocraft.me'
+                platform:
+                  type: string
+                  example: 'Bedrock'  
+                version:
+                  type: string
+                  example: 1.16.5  
+                capacity:
+                  type: number
+                  example: 1000
+                access:
+                  type: string
+
+                  enum:
+                    - Premium
+                    - noPremium
+                status:
+                  type: boolean
+                  example: true
+      responses:
+        '200':
+          description: Element updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/users'
+
+  /collection/delete/{id}:
+    delete:
+      tags:
+        - collections
+      summary: Delete an element by its id
+      operationId: deleteById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: Delete an element from the database by its _id
+          schema:
+            type: string
+            format: uuid
+      responses:
+        '204':
+          description: Element deleted successfully
+
+components:
+  schemas:
+    maps:
+      type: object
+      properties:
+        name:
+          type: string
+          example: 'OneBlock Original'
+        version:
+          type: string
+          example: '1.12.2'
+        code:
+          type: string
+          example: '001'
+        mods:
+          type: object
+          properties:
+            mod1:
+              type: string
+              example: 'Comes Alive'
+            mod2:
+              type: string
+              example: 'Just Enough Items'
+        texture:
+          type: string
+          example: 'Epic Adventures'
+        description:
+          type: string
+          example: 'An exciting adventure map'
+        category:
+          type: string
+          example: 'Adventure'
+        downloads:
+          type: number
+          example: 350
+    mods:
+      type: object
+      properties:
+        _id:
+          type: object
+          properties:
+            $oid:
+              type: string
+          example: '651e24bca3b90325b29bc618'
+        name:
+          type: string
+          example: 'Comes Alive'
+        version:
+          type: string
+          example: '1.6.4'
+        description:
+          type: string
+          example: 'Comes Alive is a gameplay modification that improves interactions with villagers in Minecraft...'
+        category:
+          type: string
+          example: 'Gameplay'
+        code:
+          type: string
+          example: '007'
+        downloads:
+          type: number
+          example: 450000
+        image:
+          type: string
+          example: ''
+
+    shaders:
+      type: object
+      properties:
+        _id:
+          type: object
+          properties:
+            $oid:
+              type: string
+          example: '651d578ffe3d59d64f664a59'
+        name:
+          type: string
+          example: 'BSL Shaders'
+        version:
+          type: string
+          example: '1.8.9'
+        code:
+          type: string
+          example: '001'
+        mods:
+          type: object
+          properties:
+            mod1:
+              type: string
+              example: 'Optifine'
+            mod2:
+              type: string
+              example: 'Forge'
+        downloads:
+          type: number
+          example: 2500
+
+    skin:
+      type: object
+      properties:
+        name:
+          type: string
+          example: 'Heisenberg'
+        code:
+          type: string
+          example: '001'
+        image:
+          type: string
+          example: 'heisenberg.png'
+        description:
+          type: string
+          example: 'Become the infamous Heisenberg from Breaking Bad.'
+        category:
+          type: string
+          example: 'TV'
+        downloads:
+          type: number
+          example: 5000
+
+    textures:
+      type: object
+      properties:
+        _id:
+          type: object
+          properties:
+            $oid:
+              type: string
+          example: '651d5badfe3d59d64f664a83'
+        name:
+          type: string
+          example: 'Epic Adventures'
+        version:
+          type: string
+          example: '1.8.9'
+        code:
+          type: string
+          example: '003'
+        category:
+          type: string
+          example: 'Realistic'
+        downloads:
+          type: number
+          example: 750
+        shaders:
+          type: string
+          example: 'Epic Adventures'
+
+    versions:
+      type: object
+      properties:
+        _id:
+          type: object
+          properties:
+            $oid:
+              type: string
+          example: '651e233fa3b90325b29bc608'
+        edition:
+          type: string
+          example: 'Xbox'
+        version:
+          type: string
+          example: '1.8.9'
+
+    users:
+      type: object
+      properties:
+        _id:
+          type: object
+          properties:
+            $oid:
+              type: string
+          example: '651d55a5fe3d59d64f664a55'
+        name:
+          type: string
+          example: 'Sofía Jiménez'
+        nickname:
+          type: string
+          example: 'BookWorm12'
+        email:
+          type: string
+          example: 'sofia@example.com'
+        password:
+          type: string
+          example: 'ReadingFan5678'
+        account:
+          type: string
+          enum:
+            - premium
+            - noPremium
+          example: 'noPremium'
+        status:
+          type: string
+          example: 'inactivo'
+        skin:
+          type: string
+          example: '001'
+    servers:
+      type: array
+      items:
+        type: object
+        properties:
+          _id:
+            type: object
+            properties:
+              $oid:
+                type: string
+                format: uuid
+                example: "6513004a747646d5a334268b"
+          name:
+            type: string
+            example: "Bedrock Realm"
+          ip:
+            type: string
+            example: "bedrockrealm.net"
+          access:
+            type: string
+            enum:
+              - Premium
+              - noPremium
+            example: "noPremium"
+          version:
+            type: string
+            example: "1.17.10"
+          platform:
+            type: string
+            example: "Bedrock"
+          bedWars:
+            type: boolean
+            example: true
+          skyWars:
+            type: boolean
+            example: false
+          survival:
+            type: boolean
+            example: true
+          pvp:
+            type: boolean
+            example: true
+          status:
+            type: boolean
+            example: true
+          hungerGames:
+            type: boolean
+            example: false
+          buildBattle:
+            type: boolean
+            example: false
+          skyBlock:
+            type: boolean
+            example: false
+          eggWars:
+            type: boolean
+            example: false
+          creative:
+            type: boolean
+            example: false
+          prison:
+            type: boolean
+            example: false
+          capacity:
+            type: integer
+            example: 300
+
+      
+
