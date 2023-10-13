@@ -10,10 +10,6 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import Menu from './Menu';
 import Failed from './Failed';
 
-//CRUD
-import Delet from '../Crud/Delet'
-import Update from '../Crud/Update'
-
 
 
  const MiddlePage = () =>{
@@ -39,8 +35,6 @@ import Update from '../Crud/Update'
         <Route path="/maps" component={RenderMaps} />
         <Route path="/skins" component={RenderSkins} />
         <Route path="/textures" component={RenderTextures} />
-        <Route path="/delete" component={Delet} />
-        <Route path="/update" component={Update} />
       </Switch></Router>
       </div>
 

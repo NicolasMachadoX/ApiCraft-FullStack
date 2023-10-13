@@ -1,18 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import './Cards.css'
+import skin from '../../Assets/skintest.webp'
 import anvil from '../../Assets/anvil.webp'
 import tnt from '../../Assets/TNT.webp'
-import UpdateModal from '../Crud/Update';
-import Search from './Search'
+
 
 const RenderUsers = () => {
 
   const  [users, setUser] = useState([]);
-  const [isUpdateModalOpen, setUpdateModalOpen] = useState(false);
-  const [selectedUser, setSelectedUser] = useState('');
-
-  const [] = useState();
-
+  
   useEffect(()=>{
   
     const getUsers = async () =>{
@@ -37,51 +33,6 @@ const RenderUsers = () => {
   
   
   }, []);
-
-
-  const handelUpdateClick = (id) =>{
-    console.log(id);
-    setSelectedUser(id)
-    setUpdateModalOpen(true)
-    console.log(selectedUser);
-  }
-
-  const handleUpdate = async (id, newData) =>{
-    try {
-
-      alert('el pepe')
-      
-      setUpdateModalOpen(false)
-    } catch (error) {
-      
-    }
-  }
-
-  const delet = async (id) =>{
-    try {
-          console.log(id);
-      const response = await fetch(`http://127.0.0.1:7777/api/users/delete/${id}`, {
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-        
-      });
-    
-      if(response.ok){
-        console.log('Data eliminated succesfully')
-        window.location.reload();
-      }else{
-        console.log('We have a problem with this request')
-      }
-
-    } catch (error) { 
-    console.log('We have a problem for obtain the users'); 
-    }
-
-
-  }
-
   
 return(
 
@@ -127,29 +78,20 @@ return(
              <div className='down'>
                <div className='buttonContainer'>
                  <div className='spanButton'>
-                   <button onClick={()=>handelUpdateClick(user._id)} className='imgItem'><img src={anvil} className='imgCard' alt='' /></button>
+                   <button src='' className='imgItem'><img src={anvil} className='imgCard' alt='' /></button>
                    <div className='hoveredSpan'>
                      <span >Update</span>
                    </div>
                  </div>
                  <div className='spanButton'>
-                   <button onClick={()=>delet(user._id)} className='imgItem'><img src={tnt} className='imgCard' alt='' /></button>
+                   <button src='' className='imgItem'><img src={tnt} className='imgCard' alt='' /></button>
                    <div className='hoveredSpan'>
                      <span >Delete</span>
                    </div>
                  </div>
                </div>
              </div>
-        {isUpdateModalOpen && (
-        <UpdateModal
-          user={selectedUser}
-          onUpdate={handleUpdate}
-          onClose={() => setUpdateModalOpen(false)}
-          isOpen={true}
-        />
-      )}
            </div>
-         
          ))}
        </div>
      </div>
