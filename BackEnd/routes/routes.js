@@ -18,7 +18,7 @@ router.get('/getAll', getAll)
 .get('/getLessPopular', getLessPopular)
 .post('/post', post)
 .patch('/update/:query', updateById)
-.delete('/delete/:query', deleteById)
+.delete('/delete/:id', deleteById)
 
 
 
